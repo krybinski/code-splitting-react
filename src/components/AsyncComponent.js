@@ -6,7 +6,7 @@ export default function asyncComponent(importComponent) {
       super(props);
       this.state = {
         component: null
-      }
+      };
     }
 
     async componentDidMount() {
@@ -25,4 +25,4 @@ export default function asyncComponent(importComponent) {
   }
 
   return AsyncComponent;
-};
+}

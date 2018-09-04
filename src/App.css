@@ -1,8 +1,11 @@
 :root {
+  --white: #ffffff;
+  --black: #000000;
   --blue-light: #74b9ff;
   --blue: #0984e3;
   --blue-dark: #0675cb;
   --grey: #2d3436;
+  --red: rgb(233, 78, 78);
 }
 
 .App {
@@ -10,19 +13,19 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: spinner infinite 10s linear;
   height: 80px;
 }
 
 .App-header {
   background-color: #222222;
-  height: 150px;
-  padding: 20px;
-  color: #ffffff;
+  padding: 30px 15px;
+  color: var(--white);
 }
 
 .App-title {
   font-size: 1.5em;
+  margin: 0;
 }
 
 .App-intro {
@@ -53,7 +56,26 @@
   background-color: var(--blue-light);
 }
 
-@keyframes App-logo-spin {
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader--text {
+  font-size: 2rem;
+  line-height: 2;
+  color: var(--black);
+}
+
+@keyframes spinner {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }

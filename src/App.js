@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Loadable from 'react-loadable';
+import logo from './logo.svg';
 
 import Page1 from './components/Page1';
 // import AsyncComponent from './components/AsyncComponent';
@@ -20,7 +21,10 @@ class App extends Component {
   }
 
   render() {
-    const Loading = () => <div>Loading...</div>;
+    const Loading = () =>
+      <div className="loader">
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>;
 
     if (this.state.route === 'page1') {
       return <Page1 onRouteChange={this.onRouteChange} />;
